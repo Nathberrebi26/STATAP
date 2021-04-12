@@ -1,0 +1,85 @@
+['builtins',
+ 'builtins',
+ 'os',
+ 'json',
+ 'numpy',
+ 'pandas',
+ 'matplotlib.pyplot',
+ 'time',
+ 'PIL',
+ 'PIL.Image',
+ 'cv2',
+ 'tensorflow',
+ 'torchvision',
+ 'torch',
+ 'imageio',
+ 'utilss',
+ 'pickle',
+ 'math',
+ 'transforms',
+ 'pip',
+ 'types']
+ 
+ 
+ Ou bien voila les imports  :
+ # Il faut peut etre run le code suivant pour les import de imageio, engine etc...: 
+
+
+
+
+
+import os
+import json
+import pickle
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import time
+import math
+
+import PIL
+import PIL.Image
+from PIL import Image
+import cv2 #conda install -c conda-forge opencv
+
+
+import tensorflow
+import torchvision
+import torch
+import torch.utils.data
+from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
+import transforms as T
+
+from IPython.display import clear_output
+
+
+et pour run les import suivant il est possible de lancer dans le terminal :
+
+                # %%shell
+
+                # # Install pycocotools
+                # git clone https://github.com/cocodataset/cocoapi.git
+                # cd cocoapi/PythonAPI
+                # python setup.py build_ext install
+                # cd ..
+                # cd ..
+
+                # # Install torchvision useful functions
+                # git clone https://github.com/pytorch/vision.git
+                # cd vision
+                # git checkout v0.3.0
+
+                # cp references/detection/utils.py ../
+                # cp references/detection/transforms.py ../
+                # cp references/detection/coco_eval.py ../
+                # cp references/detection/engine.py ../
+                # cp references/detection/coco_utils.py ../
+                # cd ..
+
+import imageio
+from engine import train_one_epoch, evaluate
+from utilss import collate_fn
+from tqdm import tqdm
+import util
